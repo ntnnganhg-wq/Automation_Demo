@@ -1,0 +1,44 @@
+package myproject;
+import java.time.Duration;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class PageLogin {
+	
+	//Locator
+	By txtEmail = By.name("email");
+	By txtPass = By.name("password");
+	By BtnAccept = By.className("btn-lg btn-primary");
+	By BtnLogin = By.cssSelector("button[type='submit]");
+	
+	private WebDriver driver;
+	private WebDriverWait wait;
+	
+	//Constructor
+	public PageLogin ( WebDriver driver) {
+		driver = this.driver;
+//		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+	}
+	
+	public static void  waitForElementVisible(WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+           .ignoring(NoSuchElementException.class)
+           .until(ExpectedConditions.visibilityOf(element));
+   }
+	
+	public void ClickAccept() {
+	 waitForElementVisible(BtnAccept);
+	 BtnAccept.click();
+	}
+	
+	
+	public void EnterEmail() {
+		WebElement Email = wait.until(ExpectedConditions.visibilityOfElementLocated(BtnAccept));
+		AcceptBtn.click();
+	}
+		
+	
+
+}

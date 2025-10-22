@@ -1,0 +1,12 @@
+package myproject;
+import java.time.Duration;
+import org.openqa.selenium.*;
+
+public class PageRegister {
+	
+	//Locator
+	By SignUpbtn = By.className("btn-out-line ml-[24px] btn-signup");
+		
+	
+
+}

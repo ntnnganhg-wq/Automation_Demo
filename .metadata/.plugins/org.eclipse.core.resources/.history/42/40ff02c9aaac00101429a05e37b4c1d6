@@ -1,0 +1,77 @@
+
+package Test_auto.Test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import Test_auto.Pages.Locator_Constructor;
+import Test_auto.Pages.Practice1;
+
+public class Practice1_Test {
+	public static void main(String[] args) {
+		
+		/*
+		//Declare array
+//		String[] Portal = new String[2];
+//		
+//		Portal[0] = "FillRite";
+//		Portal[1] = "FuelCloud";
+//		System.out.println(Portal[0]);
+
+		//Test String
+		String name2 = Practice1.Portal[1];
+		
+		System.out.println(Practice1.name);
+		System.out.println(Practice1.name.toUpperCase());
+		System.out.println(Practice1.name.length());
+		System.out.println(Practice1.name.charAt(0));
+		System.out.println(Practice1.name.replace("Ngan", "Money"));
+		System.out.println(Practice1.name.equals(name2));
+		System.out.println(Practice1.name.substring(10));
+		System.out.println(Practice1.name.substring(15,20));
+		
+		
+	
+		
+		//Test array
+		System.out.println(Practice1.Portal[0]);
+		System.out.println(Practice1.Portal[1]);
+		System.out.println(Practice1.Portal[2]);
+
+		
+		for ( int i = 0; i < Practice1.Portal.length; i++ ) {
+			
+			System.out.println(Practice1.Portal[i]);
+		}
+		
+		//Test if-else
+		for (int i = 0; i < Practice1.Portal.length; i++) {
+			if ( i == 0 ) {
+				System.out.println("Portal is FR");
+			} else if ( i == 1 ) {
+				System.out.println("Portal is FC");			
+				}
+				else {
+				System.out.println("Portal is ALL");
+			}
+		}
+		
+		*/
+		
+		  WebDriver driver = new ChromeDriver();
+
+		  driver.get("https://selectorshub.com/xpath-practice-page/");
+		  
+		  Locator_Constructor Findtable = new Locator_Constructor(driver);
+		  
+		  Findtable.inputDummyForm("ngan@fuelcloud.com","ngan123","FuelCloud", "0999111222" , "VN");
+		  
+		  
+		
+		
+		//While  
+		//if else case 1,2 ,3 
+		
+	}
+	
+
+}

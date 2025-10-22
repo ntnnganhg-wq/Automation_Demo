@@ -1,0 +1,30 @@
+package myproject;
+import java.time.Duration;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class PageLogin {
+	
+	//Locator
+	By txtEmail = By.name("email");
+	By txtPass = By.name("password");
+	By BtnAccept = By.className("btn-lg btn-primary");
+	By BtnLogin = By.cssSelector("button[type='submit]");
+	
+	private WebDriver driver;
+	private WebDriverWait wait;
+	
+	//Constructor
+	public 
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+
+}

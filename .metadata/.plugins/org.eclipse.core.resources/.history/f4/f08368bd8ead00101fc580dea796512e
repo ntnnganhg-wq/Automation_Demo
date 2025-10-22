@@ -1,0 +1,51 @@
+package Test_auto.Test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+//import Test_auto.Pages.LoginDemo;
+
+//public class LoginTest {
+//    public static void main(String[] args) throws InterruptedException {
+//    	//headless
+//    	 ChromeOptions options = new ChromeOptions();
+//         options.addArguments("--headless");         // Bật chế độ headless
+//         options.addArguments("--window-size=1920,1080"); // Đặt kích thước để tránh lỗi layout
+//         options.addArguments("--disable-gpu"); 
+//         WebDriver driver = new ChromeDriver(options);
+////       WebDriver driver = new ChromeDriver();
+//
+//        driver.get("https://preprod.fuelcloud.com/login");
+//        
+//        LoginDemo loginPage = new LoginDemo(driver);
+//        loginPage.login("tam+skynjob01@fuelcloud.com", "FuelPass2023");
+//
+////        System.out.println(loginPage.userName + "login successfully");
+//        driver.quit();
+//    }
+//}
+
+public class SeleniumScript {
+    public static void main(String[] args) {
+//        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://coderbyte.com/challenges");
+
+        WebElement searchBox = driver.findElement(By.xpath("//input[@placeholder='Search challenges...']"));
+        searchBox.sendKeys("front-end");
+
+        // Wait or press Enter if needed
+        searchBox.sendKeys(Keys.ENTER);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 1200);");
+
+        driver.quit();
+    }
+}

@@ -1,0 +1,11 @@
+package myproject;
+
+import myproject.PageLogin;
+import org.testng.annotations.Test;
+
+public class Test_PageLogin {
+  @Test
+  public void f() {
+	  
+  }
+}

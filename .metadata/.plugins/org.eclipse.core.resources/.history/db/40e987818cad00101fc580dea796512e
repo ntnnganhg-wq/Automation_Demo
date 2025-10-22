@@ -1,0 +1,45 @@
+//cat > SeleniumScript.java << 'EOM'
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
+class Student {
+    String name;             // Instance variable
+    static String school = "Greenwood High"; // Static variable
+
+    public Student(String studentName) {
+        name = studentName;
+    }
+
+    public void display() {
+        System.out.println("Name: " + name + ", School: " + school);
+    }
+
+    public static void main(String[] args) {
+    	  // 1) Tạo driver Firefox
+        WebDriver driver = new FirefoxDriver();
+
+        // 2) Mở trang
+        driver.get("https://coderbyte.com/challenges");
+
+        // 3) Tìm ô searchBox và gõ "front-end"
+        WebElement searchBox = driver.findElement(By.id("searchBox"));
+        searchBox.sendKeys("front-end");
+
+        // 4) Tìm nút searchButton và click
+        WebElement searchBtn = driver.findElement(By.id("searchButton"));
+        searchBtn.click();
+
+        // 5) Chờ 1 giây
+        try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); }
+
+        // 6) Scroll xuống 1200px bằng JavascriptExecutor
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 1200);");
+
+        // 7) Đóng trình duyệt
+        driver.quit();
+    }
+}

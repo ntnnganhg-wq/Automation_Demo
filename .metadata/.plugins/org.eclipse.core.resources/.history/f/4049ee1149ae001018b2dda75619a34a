@@ -1,0 +1,19 @@
+package myproject;
+import java.time.Duration;
+import org.openqa.selenium.*;
+
+public class PageRegister {
+	
+	//Locator
+	By email = By.name("email");
+	By pass = By.name("password");
+	By acceptBtn = By.className("btn-lg btn-primary");
+	By loginBtn = By.cssSelector("button[type='submit]");
+	
+	
+	
+	
+		
+	
+
+}

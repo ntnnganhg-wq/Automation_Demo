@@ -1,0 +1,20 @@
+package Test_auto.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import Test_auto.Pages.Locator_Constructor;
+
+public class Locator_Test {
+	
+public void main(String[] args) {
+	
+  WebDriver driver = new ChromeDriver();
+
+  driver.get("https://selectorshub.com/xpath-practice-page/");
+  
+  Locator_Constructor Findtable = new Locator_Constructor(driver);
+  
+  Findtable.ElementInTable();
+  
+}
+
+}

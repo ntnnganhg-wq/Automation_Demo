@@ -1,0 +1,8 @@
+package Test_auto.Test;
+import Test_auto.Pages.Locator_Constructor;
+
+public class Locator_Constructor {
+	
+	
+
+}

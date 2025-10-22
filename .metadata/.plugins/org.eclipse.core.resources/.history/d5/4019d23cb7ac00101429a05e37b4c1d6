@@ -1,0 +1,84 @@
+package Test_auto.Pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Test_auto.Interfaces.Login_inteface;
+
+public class LoginDemo implements Login_inteface {
+	
+    //locators
+    
+    By email = By.name("email");
+    By password = By.name("password");
+    By LoginBtn = By.cssSelector("button[type='submit']");
+    By acceptBtn = By.cssSelector("button[class='btn-lg btn-primary']");
+    By userName = By.className("text-sm font-normal max-w-[185px] truncate");
+
+	
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    //constructor
+    public LoginDemo(WebDriver driver) {
+    	 this.driver = driver;
+    	 //implicit wait
+  	     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	}
+
+    public void clickAccept() {
+    	//explicit wait
+    	   WebElement acceptButton = wait.until(ExpectedConditions.visibilityOfElementLocated(acceptBtn));
+    	   acceptButton.click(); 
+    	}
+
+
+	    // ====== Actions ======
+//	   @Override
+	    public void enterUsername(String mail) {
+	        WebElement usernameField = driver.findElement(email);
+//	        WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(email));
+	        usernameField.clear();
+	        usernameField.sendKeys(mail);
+	    }
+	   
+//	   @Override
+	    public void enterPassword(String pass) {
+	        WebElement passwordField = driver.findElement(password);
+//	        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(password));
+	        passwordField.clear();
+	        passwordField.sendKeys(pass);
+	    }
+	   
+	   
+//	   @Override
+	   public void clickLogin() {
+	        driver.findElement(LoginBtn).click();
+//	        WebElement loginButton = wait.until(ExpectedConditions.visibilityOfElementLocated(LoginBtn));
+//	        loginButton.click();
+
+	    }
+	   
+	   public void getUser() {
+		   WebElement username = driver.findElement(userName);
+		   username.getText();
+	   }
+	   
+
+	    // Gộp ba bước login
+	    public void login(String mail, String pass) throws InterruptedException {
+	    	clickAccept();
+	        enterUsername(mail);
+	        enterPassword(pass);
+	        clickLogin();
+//	        getUser();
+	    }
+		
+
+}

@@ -1,0 +1,40 @@
+package Test_auto.Test;
+
+import Test_auto.Pages.*;
+import org.testng.annotations.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.*;
+
+public class DemotestNG {
+	WebDriver driver = new ChromeDriver(); 
+	Locator_Constructor CheckESS = new Locator_Constructor(driver);
+
+	
+	@BeforeClass
+	public void setup() {
+		driver.get("https://selectorshub.com/xpath-practice-page/");
+		
+	}
+	
+ @Test(priority = 1)
+ public void Scroll() {
+	 CheckESS.ScrollToTable();
+ }
+	
+  @Test(priority = 2)
+  public void Test1() {
+	  CheckESS.ElementInTable();
+	  
+  }
+  
+  @AfterClass
+  public void close() {
+	  driver.quit();
+	  }
+}

@@ -1,0 +1,66 @@
+package myproject;
+import java.time.Duration;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class PageLogin {
+	
+	//Locator
+	By txtEmail = By.name("email");
+	By txtPass = By.name("password");
+	By BtnAccept = By.cssSelector(".btn-lg.btn-primary");
+	By BtnLogin = By.cssSelector("button[class='btn-lg btn-primary']");
+//	By MsgInvalidEmail = By.xpath("(//div[@class='is-invalid-messages']//span[2])[1]");
+//	By MsgInvalidPass = By.xpath("(//div[@class='is-invalid-messages']//span[2])[2]");
+//	
+	private WebDriver driver;
+	private WebDriverWait wait;
+	
+	//Constructor
+	public PageLogin ( WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+	}
+	
+	public void ClickAccept() {
+		WebElement AcceptBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(BtnAccept));
+		AcceptBtn.click();
+	}
+	
+	public void EnterEmail(String email) {
+		WebElement Email = driver.findElement(txtEmail);
+        Email.clear();
+		Email.sendKeys(email);
+	}
+	
+	public void EnterPass(String password) {
+		WebElement Pass = driver.findElement(txtPass);
+        Pass.clear();
+		Pass.sendKeys(password);
+	}
+	
+	public void ClickLogin() {
+		WebElement Loginbtn = driver.findElement(BtnLogin);
+		Loginbtn.click();
+	}
+	
+//	public void InvalidEmailMsg() {
+//		WebElement MsgEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(MsgInvalidEmail));
+//		MsgEmail.getText();
+//	}
+//	public void InvalidPassMsg() {
+//		WebElement MsgPass = wait.until(ExpectedConditions.visibilityOfElementLocated(MsgInvalidPass));
+//		MsgPass.getText();
+//	}
+	
+	public void Login(String email, String pass) throws InterruptedException {
+		ClickAccept();
+		EnterEmail(email);
+		EnterPass(pass);
+		ClickLogin();
+		
+	}
+
+}

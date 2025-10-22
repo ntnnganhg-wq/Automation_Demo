@@ -1,0 +1,107 @@
+package Test_auto.Pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class Locator_Constructor {
+
+//	private static  String  = null;
+	public WebDriver driver;
+	public WebDriverWait wait;
+
+	
+	//Constructors
+	public Locator_Constructor(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	//Locators
+	private By user_email =  By.id("shub26");
+	private By password = By.id("pass");
+	private By company = By.xpath("//input[@id='pass']/following::input[1]");
+	private By phone = By.xpath("//input[@id='pass']/following::input[2]");
+	private By country = By.xpath("//input[@id='pass']/following::input[3]");
+	public By table = By.xpath("//table[@id='resultTable']");
+
+
+
+	
+	//by attribute
+//	private By xp_user_email = By.xpath("//input[@id='shub85']");
+//	private By css_use_email = By.cssSelector("input[id=\'shub85\']");
+    //	private By text_user_email = By.xpath("//*[contains(text(),'your company')]");
+	//input[@name='company' and contains(@placeholder, 'Enter your company')]
+	
+	//a[text()='Joe.Root']/../preceding-sibling::td/
+	//table[@id='resultTable']/thead/tr[1]/th[1]
+	
+	//get table 
+		
+	public void inputEmail(String email) {
+		WebElement Email = driver.findElement(user_email);
+		Email.sendKeys(email);
+	}
+	public void inputPass(String pass) {
+		WebElement Pass = driver.findElement(password);
+		Pass.sendKeys(pass);
+	}
+	public void inputCompany(String comp) {
+		WebElement Company = driver.findElement(company);
+		Company.sendKeys(comp);
+	}
+	
+	public void inputPhone(String phone_num) {
+		WebElement Phone = driver.findElement(phone);
+		Phone.sendKeys(phone_num);
+//		Phone.sendKeys(String.valueOf(phone_num));
+	}
+
+	public void inputCountry(String ctry) {
+		WebElement Country = driver.findElement(country);
+		Country.sendKeys(ctry);
+	}
+	public void inputDummyForm(String email,String pass, String comp, String phone_num, String ctry) {
+		inputEmail(email);
+		inputPass(pass);
+		inputCompany(comp);
+		inputPhone(phone_num);
+		inputCountry(ctry);
+	}
+	
+	
+	public void ElementInTable() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement ElementTable = driver.findElement(table);
+		List<WebElement> rows = ElementTable.findElements(By.tagName("tr"));
+		
+//		List<WebElement> cells = ElementTable.findElements(By.tagName("td"));
+//	for (WebElement row : rows) {
+//		for (WebElement cell  : cells) {
+//			System.out.println(cell.equals("ESS"));
+		
+//		}
+//	}
+		  for (WebElement row : rows) {
+		        // Get all columns (cells) inside this row
+		        List<WebElement> cells = row.findElements(By.tagName("td"));
+
+		        // Make sure the row has enough columns (avoid index errors)
+		        if (cells.size() >= 4) {
+		            String username = cells.get(1).getText().trim();   // 2nd column
+		            String userRole = cells.get(2).getText().trim();   // 3rd column
+
+		            // Check if user role equals ESS
+		            if (userRole.equalsIgnoreCase("ESS")) {
+		                System.out.println("Username with ESS role: " + username);
+		            }
+		        }
+		    }	
+}
+
+}

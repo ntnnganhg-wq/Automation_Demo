@@ -1,0 +1,28 @@
+package Test_auto.Test;
+
+import Test_auto.Pages.*;
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+
+public class DemotestNG {
+	@Beforeclass
+	public void setup() {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://preprod.fuelcloud.com/login");
+		
+	}
+	
+	
+  @Test
+  public void f() {
+      System.out.println("Ngan chekck TestNG is working!");
+
+  }
+}

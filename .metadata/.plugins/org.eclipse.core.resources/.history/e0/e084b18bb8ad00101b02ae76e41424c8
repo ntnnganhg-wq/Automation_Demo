@@ -1,0 +1,12 @@
+package Test_auto.Test;
+
+import org.testng.annotations.Test;
+
+public class DemotestNG {
+	
+  @Test
+  public void f() {
+      System.out.println("Ngan chekck TestNG is working!");
+
+  }
+}

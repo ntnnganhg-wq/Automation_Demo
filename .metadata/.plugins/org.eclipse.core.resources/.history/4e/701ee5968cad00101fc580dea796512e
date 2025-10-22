@@ -1,0 +1,24 @@
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SeleniumScript {
+    public static void main(String[] args) {
+        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://coderbyte.com/challenges");
+
+        WebElement searchBox = driver.findElement(By.xpath("//input[@placeholder='Search challenges...']"));
+        searchBox.sendKeys("front-end");
+
+        // Wait or press Enter if needed
+        searchBox.sendKeys(Keys.ENTER);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 1200);");
+
+        driver.quit();
+    }
+}

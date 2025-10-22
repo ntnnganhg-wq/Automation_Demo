@@ -1,0 +1,60 @@
+package Test_auto.Test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+//import Test_auto.Pages.LoginDemo;
+
+//public class LoginTest {
+//    public static void main(String[] args) throws InterruptedException {
+//    	//headless
+//    	 ChromeOptions options = new ChromeOptions();
+//         options.addArguments("--headless");         // Bật chế độ headless
+//         options.addArguments("--window-size=1920,1080"); // Đặt kích thước để tránh lỗi layout
+//         options.addArguments("--disable-gpu"); 
+//         WebDriver driver = new ChromeDriver(options);
+////       WebDriver driver = new ChromeDriver();
+//
+//        driver.get("https://preprod.fuelcloud.com/login");
+//        
+//        LoginDemo loginPage = new LoginDemo(driver);
+//        loginPage.login("tam+skynjob01@fuelcloud.com", "FuelPass2023");
+//
+////        System.out.println(loginPage.userName + "login successfully");
+//        driver.quit();
+//    }
+//}
+
+public class SeleniumScript {
+    public static void main(String[] args) {
+//        WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://coderbyte.com/challenges");
+
+        // 3) Tìm ô searchBox và gõ "front-end"
+        WebElement searchBox = driver.findElement(By.id("searchBox"));
+        searchBox.sendKeys("front-end");
+
+        // 4) Tìm nút searchButton và click
+        WebElement searchBtn = driver.findElement(By.id("searchButton"));
+        searchBtn.click();
+
+        // 5) Chờ 1 giây
+        try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); }
+
+        // 6) Scroll xuống 1200px bằng JavascriptExecutor
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 1200);");
+
+        // 7) Đóng trình duyệt
+        driver.quit();
+
+        driver.quit();
+    }
+}
