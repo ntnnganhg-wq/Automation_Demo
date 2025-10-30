@@ -1,25 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-21T15:31:13 ICT" name="Default suite" finished-at="2025-10-21T15:32:14 ICT" duration-ms="60906">
+  <suite started-at="2025-10-28T15:44:11 ICT" name="Default suite" finished-at="2025-10-28T15:46:53 ICT" duration-ms="162080">
     <groups>
     </groups>
-    <test started-at="2025-10-21T15:31:13 ICT" name="Default test" finished-at="2025-10-21T15:32:14 ICT" duration-ms="60906">
-      <class name="myproject.Test_PageLogin">
-        <test-method is-config="true" signature="setup()[pri:0, instance:myproject.Test_PageLogin@3754a4bf]" started-at="2025-10-21T15:31:13 ICT" name="setup" finished-at="2025-10-21T15:31:50 ICT" duration-ms="37370" status="PASS">
+    <test started-at="2025-10-28T15:44:11 ICT" name="Default test" finished-at="2025-10-28T15:46:53 ICT" duration-ms="162080">
+      <class name="myproject.Test_Login_v1">
+        <test-method is-config="true" signature="setup()[pri:0, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:44:11 ICT" name="setup" finished-at="2025-10-28T15:44:44 ICT" duration-ms="33113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Test1()[pri:0, instance:myproject.Test_PageLogin@3754a4bf]" started-at="2025-10-21T15:31:50 ICT" name="Test1" finished-at="2025-10-21T15:32:13 ICT" duration-ms="23234" status="PASS">
+        <test-method signature="Test1()[pri:1, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:44:44 ICT" name="Test1" finished-at="2025-10-28T15:44:58 ICT" duration-ms="13842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test1 -->
-        <test-method is-config="true" signature="close()[pri:0, instance:myproject.Test_PageLogin@3754a4bf]" started-at="2025-10-21T15:32:13 ICT" name="close" finished-at="2025-10-21T15:32:14 ICT" duration-ms="198" status="PASS">
+        <test-method signature="Test2()[pri:2, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:44:58 ICT" name="Test2" finished-at="2025-10-28T15:45:52 ICT" duration-ms="54367" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- myproject.Test_PageLogin -->
+        </test-method> <!-- Test2 -->
+        <test-method signature="Test3()[pri:3, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:45:52 ICT" name="Test3" finished-at="2025-10-28T15:46:10 ICT" duration-ms="17980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method signature="Test4()[pri:4, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:10 ICT" name="Test4" finished-at="2025-10-28T15:46:29 ICT" duration-ms="19040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method signature="Test5()[pri:5, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:29 ICT" name="Test5" finished-at="2025-10-28T15:46:36 ICT" duration-ms="7318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test5 -->
+        <test-method signature="Test6()[pri:6, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:36 ICT" name="Test6" finished-at="2025-10-28T15:46:37 ICT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test6 -->
+        <test-method signature="Test7()[pri:7, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:37 ICT" name="Test7" finished-at="2025-10-28T15:46:50 ICT" duration-ms="13946" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=141.0.7390.123)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.6', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [482f637ae0eea5e7bf939526cc9d4ce3, getElementText {id=f.E5352210FEB90F0FF1287C8347498E8D.d.2B32263BD617213E0296039B86D05362.e.692}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: /var/folders/3s/mxvqc7ms11s...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59702/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[[[ChromeDriver: chrome on mac (482f637ae0eea5e7bf939526cc9d4ce3)] -> xpath: //table[@class='w-full min-w-full table-fixed border-collapse last:[&_th]:sticky last:[&_th]:right-0 last:[&_th]:z-10 last:[&_td]:sticky last:[&_td]:right-0 last:[&_td]:z-5 last:[&_td]:bg-transparent']/tbody]] -> tag name: tr]] -> tag name: td]
+Session ID: 482f637ae0eea5e7bf939526cc9d4ce3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=141.0.7390.123)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.6', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [482f637ae0eea5e7bf939526cc9d4ce3, getElementText {id=f.E5352210FEB90F0FF1287C8347498E8D.d.2B32263BD617213E0296039B86D05362.e.692}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: /var/folders/3s/mxvqc7ms11s...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59702/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[[[ChromeDriver: chrome on mac (482f637ae0eea5e7bf939526cc9d4ce3)] -> xpath: //table[@class='w-full min-w-full table-fixed border-collapse last:[&_th]:sticky last:[&_th]:right-0 last:[&_th]:z-10 last:[&_td]:sticky last:[&_td]:right-0 last:[&_td]:z-5 last:[&_td]:bg-transparent']/tbody]] -> tag name: tr]] -> tag name: td]
+Session ID: 482f637ae0eea5e7bf939526cc9d4ce3
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at myproject.PageBilling.CountSubXtellio(PageBilling.java:89)
+at myproject.Test_Login_v1.Test7(Test_Login_v1.java:100)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test7 -->
+        <test-method signature="Test8()[pri:8, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:50 ICT" name="Test8" finished-at="2025-10-28T15:46:51 ICT" duration-ms="40" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Subscription count of Xtellio isn't correct expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Subscription count of Xtellio isn't correct expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at myproject.Test_Login_v1.Test8(Test_Login_v1.java:106)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test8 -->
+        <test-method signature="Test9()[pri:9, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:51 ICT" name="Test9" finished-at="2025-10-28T15:46:53 ICT" duration-ms="1973" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Summary tab count is wrong expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Summary tab count is wrong expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at myproject.Test_Login_v1.Test9(Test_Login_v1.java:114)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test9 -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:myproject.Test_Login_v1@7d9d0818]" started-at="2025-10-28T15:46:53 ICT" name="quitBrowser" finished-at="2025-10-28T15:46:53 ICT" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- myproject.Test_Login_v1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

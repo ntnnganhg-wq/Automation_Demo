@@ -36,12 +36,6 @@ public class Test_PageLogin {
         Assert.assertEquals(TestLogin.InvalidEmailMsg(), "Please enter an Email.");
 
     }
-    @Test(priority =3)
-    public void Test3() throws InterruptedException {
-          TestLogin.Login("", "");
-        Assert.assertEquals(TestLogin.InvalidEmailMsg(), "Please enter an Email.");
-
-    }
 
     @AfterClass
    public void close() {
