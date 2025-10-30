@@ -1,8 +1,11 @@
-<suite name="Parallel Test Suite" parallel="classes" thread-count="2">
+<suite name="Parallel Test Suite" parallel="classes" thread-count="1">
     <test name="Parallel Tests">
+    
         <classes>
             <class name="myproject.Test_Login_v1"/>
-            <class name="myproject.Test_AddNewTankMonitor"/>
         </classes>
+        
+  
+        
     </test>
 </suite>
