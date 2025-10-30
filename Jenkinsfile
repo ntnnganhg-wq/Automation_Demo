@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ntnnganhg-wq/Automation_Demo.git'
+                git branch: 'main', url: 'https://github.com/ntnnganhg-wq/Automation_Demo.git'
+
             }
         }
 
