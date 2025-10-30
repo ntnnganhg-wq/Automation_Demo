@@ -10,13 +10,15 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/ntnnganhg-wq/Automation_Demo.git'
-
             }
         }
 
         stage('Build & Test') {
-             dir('myproject') {
-                 sh 'mvn clean test'
+            steps {
+                // Run the build inside the 'myproject' folder
+                dir('myproject') {
+                    sh 'mvn clean test'
+                }
             }
         }
     }
