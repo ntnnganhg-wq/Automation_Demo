@@ -1,8 +1,10 @@
-package myproject;
+package pages;
 
 import java.util.List;
 
 import org.openqa.selenium.*;
+
+import utils.BasePage;
 
 public class PageAddNewTankMonitor extends BasePage  {
 

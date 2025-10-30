@@ -1,9 +1,6 @@
 
 
-package myproject;
-
-import myproject.Login_v1;
-import myproject.PageAddNewTankMonitor;
+package tests;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +12,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import pages.Login_v1;
+import pages.PageAddNewTankMonitor;
+import pages.PageBilling;
 
 public class Test_Login_v1 {
     WebDriver driver;

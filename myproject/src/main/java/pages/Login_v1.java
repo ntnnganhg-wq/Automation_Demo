@@ -1,11 +1,14 @@
 
 
-package myproject;
+package pages;
 import java.time.Duration;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utils.BasePage;
+import utils.InterfaceLogin;
 
 
 public class Login_v1 extends BasePage implements InterfaceLogin {

@@ -1,4 +1,4 @@
-package myproject;
+package utils;
 
 public interface InterfaceBilling {
 	void NavigateToBilling();
