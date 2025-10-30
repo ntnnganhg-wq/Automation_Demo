@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'jdk17'      // use the name configured in Jenkins global tools
+        maven 'maven'    // same here
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/ntnnganhg-wq/Automation_Demo.git'
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+    }
+}
