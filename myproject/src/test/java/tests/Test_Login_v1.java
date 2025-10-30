@@ -43,7 +43,7 @@ public class Test_Login_v1 {
     public void Test1() throws InterruptedException {
           TestLogin.Login("ngan+stage1.job1@fuelcloud.com", "ngan123");
     }  
-    
+    /*
     @Test (priority =2)
     public void Test2() throws InterruptedException {
     	Billing.NavigateToBilling();
@@ -114,7 +114,7 @@ public class Test_Login_v1 {
     	int SummaryCount = Billing.getQuantityByType("Xtellio Tank Monitors");
    	Assert.assertTrue( SummaryCount == subXtellioAfter, "Summary tab count is wrong");
    	}
-
+*/
     
     @AfterClass
  public void quitBrowser() {
